@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+   
+}
+
+
+
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+    z-index: 10;
+    background: #ffffffde;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);}
+header .logo{
+    z-index: 10;
+}
+header .logo img{
+    height: 50px;
+    margin: 6px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 70px;
+}
+header nav ul {
+    display: flex;
+    right: 100px;
+    position: relative;
+    /* padding: 20px;
+    margin: 14px; */
+}
+header nav ul li a {
+    display: inline-block;
+    color: #000000;
+    padding: 8px 0px;
+    margin: 4px 27px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+    font-size: 20px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: rgb(0, 0, 0);
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000000;
+}
+
+@media only screen and (max-width: 1350px) {
+    header nav ul{
+        left: -45px;
+    }
+}
+
+
+
+@media only screen and (max-width: 1250px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 15px 30px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #ffffffc2;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+}
